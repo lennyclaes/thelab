@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    background: #333;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+}
+
+header #brand {
+    float: left;
+    width: 40%;
+}
+
+header #brand img {
+    height: 80px;
+    margin-left: 100px;
+}
+
+nav {
+    float: right;
+}
+
+nav a {
+    display: inline-block;
+    padding: 21px;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Kanit', sans-serif;
+}
+
+nav a:hover {
+    color: #e3a857;
+}
+
+#main {
+    margin-top: 80px;
+}
+
+.section-wrap {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+}
+
+.section-wrap h1 {
+    padding: 25px;
+    color: #e3a857;
+    font-size: 48px;
+}
+
+.section-wrap p {
+    color: #fff;
+    font-size: 24px;
+}
+
+.section-wrap[path="socialclub"] {
+    background: url('../img/sc.jpg') center center fixed no-repeat;
+}
+
+.section-wrap[path="thelabvr"] {
+    background: url('../img/gh.jpg') center center fixed no-repeat;
+}
+
+.section-wrap[path="nucleus"] {
+    background: url('../img/nucleus.png') center center fixed repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.section-wrap[path="merch"] {
+    background: url('../img/merch.jpg') center center fixed no-repeat;
+}
+
+footer {
+    background: #333;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+}
+
+footer p {
+    color: #fff;
+    padding: 15px;
+}
+
+footer a {
+    color: #e3a857;
+}
+
+footer p.line-above {
+    border-top: 1px solid #fff;
+}
+
+@media (max-width: 1300px) {
+    nav a {
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 1130px) {
+    nav a {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    nav a {
+        padding: 21px 5px;
+    }
+}
+
+@media (max-width: 860px) {
+    nav {
+        display: none;
+    }
+
+    header #brand {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    header #brand img {
+        margin: 0;
+    }
+}

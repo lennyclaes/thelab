@@ -1,0 +1,266 @@
+/* 
+    Green: #A3CF2D
+*/
+
+@font-face {
+    font-family: "Bebas";
+    src: url("../fonts/BebasNeue-Regular.otf");
+}
+
+
+
+.link {
+    color: #a3cf2d;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #fff;
+    position: fixed;
+    height: 81px;
+    width: 100%;
+    z-index: 10;
+}
+
+#brand {
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+
+#brand h1 {
+    padding: 15px;
+    font-family: 'Bebas', sans-serif;
+    font-size: 48px;
+    color: #a3cf2d;
+}
+
+#logo-top {
+    display: block;
+    height: 100%;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-top img {
+    width: 300px;
+    height: 80px;
+    margin-left: 400px;
+    display: none;
+}
+
+#logo-top img.show {
+    display: block;
+}
+
+#right-top {
+    background: #000;
+    width: 70%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+    height: 100%;
+}
+
+nav {
+    display: inline-block;
+    width: 60%;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: calc(25px - 3px) 25px;
+    display: inline-block;
+    font-size: 32px;
+    font-family: 'Bebas', sans-serif;
+}
+
+nav a:hover {
+    color: #a3cf2d;
+}
+
+#top {
+    width: 100vw;
+    height: 100vh;
+    background: url('../img/GH_BG.jpg') top left no-repeat;
+}
+
+#top-upper {
+    width: 100%;
+    height: 60vh;
+    background: #0006;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#top-upper img {
+    width: 400px;
+    height: 150px;
+    margin-top: 250px;
+}
+
+#top-lower {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+#open {
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Bebas', sans-serif;
+}
+
+#open h2 {
+    color: #a3cf2d;
+    font-size: 34px;
+}
+
+#open p {
+    color: #fff;
+    font-size: 24px;
+}
+
+#socials {
+    text-align: center;
+    
+}
+
+#socials a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#socials a img {
+    width: 50px;
+    height: 50px;
+    margin: 5px 10px;
+}
+
+#main {
+    background: #000;
+    display: block;
+    height: 100%;
+}
+
+.block {
+    background: transparent;
+    padding: 15px;
+    font-family: 'Bebas', sans-serif;
+}
+
+.block h2 {
+    text-align: center;
+    color: #a3cf2d;
+    font-size: 42px;
+    padding: 5px 0px;
+}
+
+#main .block p {
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 0;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#main .block p.green {
+    color: #a3cf2d;
+    text-align: center;
+}
+
+.wrap  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block .col {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+footer {
+    display: block;
+    background: #000;
+    width: 100%;
+}
+
+footer p {
+    color: #fff;
+    font-size: 24px;
+    padding: 5px 0;
+}
+
+footer .container {
+    display: flex;
+}
+
+footer .block {
+    width: 30%;
+    text-align: center;
+    background: #000;
+    height: 400px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1200px) {
+    #right-top {
+        /* width: 50%;
+        right: 0; */
+        display: none;
+    }
+
+    #brand {
+        width: 100%;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 860px) {
+    footer .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .block {
+        width: 100%;
+    }
+
+    #top-upper img {
+        width: 80%;
+        margin-left: 10%;
+    }
+}

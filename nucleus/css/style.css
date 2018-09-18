@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #555;
+    overflow: hidden;
+}
+
+#center-content {
+    background: #333;
+    text-align: center;
+    padding: 25px 0;
+    width: 100%;
+    display: block;
+    border-top: 3px solid #a3cf2d;
+    border-bottom: 3px solid #a3cf2d;
+}
+
+#center-content p {
+    color: #a3cf2d;
+    font-family: 'Russo One', Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+#loading {
+    display: block;
+    margin: 50px;
+}
+
+#loading img {
+    width: 140px;
+    height: 140px;
+    animation: load 5s linear infinite;
+}
+
+@keyframes load {
+    0% {transform: rotateZ(0deg) scale(0.9);}
+    50% {transform: rotateZ(180deg) scale(1.3);}
+    100% {transform: rotateZ(360deg) scale(0.9);}
+}
