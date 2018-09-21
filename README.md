@@ -1,6 +1,8 @@
 # The Lab Game Concept
 ![The Lab Logo](https://raw.githubusercontent.com/lotusfreak15/thelab/master/img/logo.png)
 
+http://thelab.be
+
 The Lab is divided in 4 different organisations
 
 - The Lab Social Club
