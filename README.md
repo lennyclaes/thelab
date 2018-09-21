@@ -11,4 +11,4 @@ The Lab is divided in 4 different organisations
   - Different events
 - Merchandise
   - The biggest geek store in Belgium
-  - http://store.thelab.be[Merchandise](http://store.thelab.be)
+  - http://store.thelab.be![Merchandise](http://store.thelab.be)
