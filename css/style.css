@@ -3,6 +3,16 @@
     padding: 0;
 }
 
+body {
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('/assets/fonts/BebasNeue-Regular.otf');
+    /* src: url('/assets/fonts/BebasNeue-Regular.otf'); */
+}
+
 header {
     position: fixed;
     background: #333;
@@ -40,51 +50,79 @@ nav a:hover {
     color: #e3a857;
 }
 
-#main {
+.wrap {
     margin-top: 80px;
+    height: calc(100vh - 80px);
+    width: 100%;
+    display: flex;
 }
 
-.section-wrap {
-    width: 100%;
-    height: 100vh;
-    display: block;
+.wrap .col {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Kanit', sans-serif;
+    width: 25%;
+    height: 100%;
+    transition: 0.2s linear;
+    /* border-right: 1px solid #ccc; */
+    position: relative;
+}
+
+.wrap .col::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.wrap .col .col-content {
     text-align: center;
-}
-
-.section-wrap h1 {
-    padding: 25px;
-    color: #e3a857;
-    font-size: 48px;
-}
-
-.section-wrap p {
     color: #fff;
+    z-index: 2;
+    padding: 10px;
+    font-family: 'Bebas', sans-serif;
+}
+
+.wrap .col .col-content p {
+    font-size: 20px;
+}
+
+.wrap .col .col-content a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+    display: block;
+}
+
+.wrap .col:hover {
+    width: 100%;
+}
+
+.wrap .col:hover .col-content p {
     font-size: 24px;
 }
 
-.section-wrap[path="socialclub"] {
-    background: url('../img/sc.jpg') center center fixed no-repeat;
-}
-
-.section-wrap[path="thelabvr"] {
-    background: url('../img/gh.jpg') center center fixed no-repeat;
-}
-
-.section-wrap[path="nucleus"] {
-    background: url('../img/nucleus.png') center center fixed repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+.tsc {
+    background: url('/img/TSC Background.png') center center;
     background-size: cover;
 }
 
-.section-wrap[path="merch"] {
-    background: url('../img/merch.jpg') center center fixed no-repeat;
+.vr {
+    background: url('/img/VR Background.jpg') center center;
+    background-size: cover;
+}
+
+.merch {
+    background: url('/img/MERCH Background.jpg') center center;
+    background-size: cover;
+}
+
+.nucleus {
+    background: url('/img/NUCLEUS Background.png') center center;
+    background-size: cover;
 }
 
 footer {
