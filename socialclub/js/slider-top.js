@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     imgElt.style.background = 'url(img/' + imgs[curImg] + ')';
     imgElt.style.backgroundRepeat = "no-repeat";
     imgElt.style.backgroundPosition = "top";
-    imgElt.style.backgroundSize = "100vw 100vh";
+    imgElt.style.backgroundSize = "cover";
+    imgElt.style.backgroundAttachment = "fixed";
     curImg++;
 
     slideTop();
@@ -24,7 +25,8 @@ function slideTop() {
         imgElt.style.background = 'url(img/' + imgs[curImg] + ')';
         imgElt.style.backgroundRepeat = "no-repeat";
         imgElt.style.backgroundPosition = "top";
-        imgElt.style.backgroundSize = "100vw 100vh";
+        imgElt.style.backgroundSize = "cover";
+        imgElt.style.backgroundAttachment = "fixed";
         curImg++;
         if(curImg >= imgs.length) {
             curImg = 0;

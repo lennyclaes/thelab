@@ -1,5 +1,10 @@
-// preload();
+let video = document.querySelector('video');
 
-// function preload() {
-//     let socket = new WebSocket('wss://www.lennyclaes.be/TLSC/img');
-// }
+video.addEventListener('click', videoClicked);
+
+function videoClicked(e) {
+    e.target.setAttribute('controls', 'controls');
+    setTimeout(() => {
+        e.target.removeAttribute('controls');
+    }, 4000);
+}

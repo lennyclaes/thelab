@@ -10,7 +10,6 @@ body {
 @font-face {
     font-family: 'Bebas';
     src: url('/assets/fonts/BebasNeue-Regular.otf');
-    /* src: url('/assets/fonts/BebasNeue-Regular.otf'); */
 }
 
 header {
@@ -30,6 +29,7 @@ header #brand {
 header #brand img {
     height: 80px;
     margin-left: 100px;
+    cursor: help;
 }
 
 nav {
@@ -64,7 +64,6 @@ nav a:hover {
     width: 25%;
     height: 100%;
     transition: 0.2s linear;
-    /* border-right: 1px solid #ccc; */
     position: relative;
 }
 
@@ -88,6 +87,19 @@ nav a:hover {
 
 .wrap .col .col-content p {
     font-size: 20px;
+}
+
+.wrap .col.show .col-content p {
+    display: block;
+}
+
+.wrap .col.show {
+    height: 100%;
+}
+
+.wrap .col.hide {
+    visibility: hidden;
+    height: 0;
 }
 
 .wrap .col .col-content a {
@@ -125,44 +137,78 @@ nav a:hover {
     background-size: cover;
 }
 
-footer {
-    background: #333;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay.show {
+    display: flex;
+}
+
+.overlay .overlay-content {
     text-align: center;
-    font-family: 'Kanit', sans-serif;
-}
-
-footer p {
+    background: #333;
+    z-index: 6;
     color: #fff;
-    padding: 15px;
+    font-family: 'Bebas', sans-serif;
+    padding: 25px;
 }
 
-footer a {
+.overlay .overlay-content h1 {
+    font-size: 38px;
+    border-bottom: 3px solid #e3a857;
+    margin-bottom: 10px;
+}
+
+.overlay .overlay-content p {
+    font-size: 22px;
+}
+
+.overlay .overlay-content p.boxed {
+    border-top: 1px solid #e3a857;
+    border-bottom: 1px solid #e3a857;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.overlay .overlay-content a {
+    text-decoration: none;
     color: #e3a857;
+    font-size: 22px;
 }
 
-footer p.line-above {
-    border-top: 1px solid #fff;
+.overlay .close-btn {
+    color: #e3a857;
+    z-index: 6;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
-@media (max-width: 1300px) {
-    nav a {
-        margin: 0 5px;
-    }
+.overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.45);
 }
 
-@media (max-width: 1130px) {
-    nav a {
-        margin: 0;
-    }
-}
-
-@media (max-width: 1100px) {
-    nav a {
-        padding: 21px 5px;
-    }
-}
-
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
     nav {
         display: none;
     }
@@ -175,5 +221,22 @@ footer p.line-above {
 
     header #brand img {
         margin: 0;
+    }
+
+    .wrap {
+        display: block;
+    }
+
+    .wrap .col {
+        width: 100%;
+        height: 25%;
+    }
+
+    .wrap .col .col-content a {
+        font-size: 26px;
+    }
+
+    .wrap .col .col-content p {
+        display: none;
     }
 }
