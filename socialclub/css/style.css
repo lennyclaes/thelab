@@ -163,10 +163,15 @@ footer img {
     .kaders-row img {
         display: block;
         margin:  30px auto;
+        width: 80%;
     }
 
-    #about img {
+    /* #quote {
         width: 80%;
+        margin: 0;
+    } */
+    video {
+        margin: 0;
     }
 }
 
